@@ -1,0 +1,83 @@
+.hero {
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  padding: clamp(20px, 6vw, 80px);
+  color: white;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+  cursor: default;
+  user-select: none;
+}
+
+.hero-content {
+  max-width: 900px;
+  margin-top: -170px;
+}
+
+/* --- Headings --- */
+.hero-content h1 {
+  font-size: clamp(2.2rem, 4vw, 3rem);
+  font-weight: bold;
+}
+
+.hero-content h1 span {
+  color: #00bcd4;
+}
+
+.hero-content h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  margin-top: 0px;
+  opacity: 0.85;
+}
+
+.hero-content p {
+  margin-top: 15px;
+  font-size: clamp(1rem, 2vw, 1.1rem);
+  opacity: 0.75;
+  line-height: 1.6;
+}
+
+/* --- Button --- */
+.hero-content button {
+  margin-top: 55px;
+  padding: 12px 28px;
+  background-color: #00bcd4;
+  border: none;
+  border-radius: 5px;
+  color: white;
+  font-size: clamp(0.95rem, 1.5vw, 1rem);
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.hero-content button:hover {
+  background-color: #0097a7;
+  transform: translateY(-2px);
+}
+
+/* --- SMALL PHONES --- */
+@media (max-width: 480px) {
+  .hero-content h1 {
+    line-height: 1.2;
+    margin-top: 20vh;
+  }
+
+  .hero-content h2 {
+    margin-top: 8px;
+  }
+
+  .hero-content p {
+    margin-top: 12px;
+  }
+}
+
+/* --- LARGE DESKTOPS & TVs --- */
+@media (min-width: 1600px) {
+  .hero-content {
+    max-width: 1200px;
+  }
+}

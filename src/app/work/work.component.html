@@ -1,0 +1,44 @@
+<section class="work-section" id="work">
+    <h2 class="section-title">My Work</h2>
+    <div class="work-container">
+        <!-- Websites Carousel -->
+        <div class="carousel" (mouseenter)="pauseWebsiteAuto()" (mouseleave)="startWebsiteAuto()">
+            <h2 class="carousel-title">Websites</h2>
+
+            <div class="viewport">
+                <div class="track website-track" [style.transform]="'translateX(-' + currentWebsiteIndex * 100 + '%)'">
+                    <div class="item" *ngFor="let p of websiteProjects">
+                        <img [src]="p.image" [alt]="p.title" class="item-image" />
+                        <h3>{{ p.title }}</h3>
+                        <a class="view-btn" [href]="p.link" target="_blank">{{
+                            p.buttonText
+                            }}</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav left" (click)="prevWebsite()">‹</button>
+            <button class="nav right" (click)="nextWebsite()">›</button>
+        </div>
+
+        <!-- Advertising Carousel -->
+        <div class="carousel" (mouseenter)="pauseAdAuto()" (mouseleave)="startAdAuto()">
+            <h2 class="carousel-title">Advertising</h2>
+
+            <div class="viewport">
+                <div class="track ad-track" [style.transform]="'translateX(-' + currentAdIndex * 100 + '%)'">
+                    <div class="item" *ngFor="let p of adProjects">
+                        <img [src]="p.image" [alt]="p.title" class="item-image" />
+                        <h3>{{ p.title }}</h3>
+                        <a class="view-btn" [href]="p.link" target="_blank">{{
+                            p.buttonText
+                            }}</a>
+                    </div>
+                </div>
+            </div>
+
+            <button class="nav left" (click)="prevAd()">‹</button>
+            <button class="nav right" (click)="nextAd()">›</button>
+        </div>
+    </div>
+</section>

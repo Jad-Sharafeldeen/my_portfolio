@@ -1,0 +1,105 @@
+.footer {
+  background: linear-gradient(180deg, #0b0b0b, #111);
+  color: #cfcfcf;
+  padding: 60px 20px 30px;
+  cursor: default;
+  user-select: none;
+}
+
+.footer-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 40px;
+}
+
+/* ---------------- BRAND ---------------- */
+.footer-brand h3 {
+  color: #00bcd4;
+  font-size: 1.6rem;
+  margin-bottom: 8px;
+}
+
+.footer-brand p {
+  font-size: 0.95rem;
+  opacity: 0.85;
+}
+
+/* ---------------- LINKS ---------------- */
+.footer-links {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-links a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-links a:hover {
+  color: #00bcd4;
+}
+
+/* ---------------- SOCIALS ---------------- */
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-socials a {
+  color: #cfcfcf;
+  text-decoration: none;
+  transition: 0.25s ease;
+}
+
+.footer-socials a:hover {
+  color: #00bcd4;
+}
+
+/* ---------------- BOTTOM ---------------- */
+.footer-bottom {
+  margin-top: 40px;
+  padding-top: 20px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+  font-size: 0.85rem;
+  opacity: 0.7;
+}
+
+/* =================================================
+   RESPONSIVE
+   ================================================= */
+
+/* Tablets & phones */
+@media (max-width: 900px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-links,
+  .footer-socials {
+    align-items: center;
+  }
+}
+
+/* Large desktops & TVs */
+@media (min-width: 1600px) {
+  .footer {
+    padding: 90px 40px 40px;
+  }
+
+  .footer-brand h3 {
+    font-size: 2rem;
+  }
+
+  .footer-brand p {
+    font-size: 1.05rem;
+  }
+}

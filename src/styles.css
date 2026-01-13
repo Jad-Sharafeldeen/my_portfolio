@@ -1,1 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+  background-color: rgb(73, 73, 73);
+  scroll-behavior: smooth;
+  scroll-padding-top: 0px; /* optional: offset for navbar height */
+}

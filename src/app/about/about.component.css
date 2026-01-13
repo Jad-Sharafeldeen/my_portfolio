@@ -1,0 +1,201 @@
+.about-section {
+  background-color: rgba(0, 0, 0, 0.573);
+  color: white;
+  padding: 120px 50px;
+  text-align: center;
+  cursor: default;
+  user-select: none;
+}
+
+.about-title {
+  font-size: 2.8rem;
+  color: #00bcd4;
+  margin-bottom: 40px;
+  transition: 0.3s ease;
+}
+
+.about-content p {
+  max-width: 850px;
+  margin: 0 auto 60px auto;
+  font-size: 1.2rem;
+  line-height: 1.7;
+  color: #e5e5e5;
+  transition: 0.3s ease;
+}
+
+.about-highlights {
+  display: flex;
+  justify-content: center;
+  gap: 40px;
+  flex-wrap: wrap;
+}
+
+.highlight {
+  background-color: #111;
+  padding: 25px 30px;
+  width: 280px;
+  border-radius: 15px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+  transition: 0.3s ease;
+}
+
+.highlight h3 {
+  color: #00bcd4;
+  margin-bottom: 10px;
+  font-size: 1.3rem;
+}
+
+.highlight p {
+  color: #ccc;
+  font-size: 0.95rem;
+}
+
+/* Glow hover effect */
+.glow-hover:hover {
+  text-shadow: 0 0 8px #00bcd49f, 0 0 15px #00bcd46a;
+  color: #ffffff;
+}
+
+/* Highlight cards glow */
+.highlight:hover {
+  box-shadow: 0 0 15px #00bcd480;
+  transform: translateY(-5px);
+}
+
+/* cursor glow */
+
+#cursor-glow {
+  position: fixed;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  pointer-events: none;
+  transform: translate(-50%, -50%);
+  filter: blur(30px);
+  background: radial-gradient(
+    circle,
+    rgba(255, 255, 255, 0.35),
+    rgba(255, 255, 255, 0)
+  );
+  opacity: 0;
+  transition: opacity 0.25s ease-out;
+  z-index: 9999;
+}
+
+/* Responsive */
+/* ================================
+   SMALL PHONES (≤ 480px)
+   ================================ */
+@media (max-width: 480px) {
+  .about-section {
+    padding: 80px 16px;
+  }
+
+  .about-title {
+    font-size: 2.1rem;
+    margin-bottom: 28px;
+  }
+
+  .about-content p {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 40px;
+  }
+
+  .about-highlights {
+    gap: 20px;
+  }
+
+  .highlight {
+    padding: 20px;
+  }
+
+  .highlight h3 {
+    font-size: 1.15rem;
+  }
+
+  .highlight p {
+    font-size: 0.9rem;
+  }
+}
+
+/* ================================
+   TABLETS (481px – 1024px)
+   ================================ */
+@media (min-width: 481px) and (max-width: 1024px) {
+  .about-section {
+    padding: 100px 32px;
+  }
+
+  .about-title {
+    font-size: 2.4rem;
+  }
+
+  .about-content p {
+    font-size: 1.1rem;
+    max-width: 700px;
+  }
+
+  .about-highlights {
+    gap: 30px;
+  }
+
+  .highlight {
+    width: 260px;
+  }
+}
+
+/* ================================
+   LARGE DESKTOPS & TVs (≥ 1600px)
+   ================================ */
+@media (min-width: 1600px) {
+  .about-section {
+    padding: 160px 140px;
+  }
+
+  .about-title {
+    font-size: 3.4rem;
+    margin-bottom: 60px;
+  }
+
+  .about-content p {
+    max-width: 1000px;
+    font-size: 1.35rem;
+    line-height: 1.8;
+  }
+
+  .about-highlights {
+    gap: 60px;
+  }
+
+  .highlight {
+    width: 340px;
+    padding: 35px 40px;
+  }
+
+  .highlight h3 {
+    font-size: 1.5rem;
+  }
+
+  .highlight p {
+    font-size: 1.05rem;
+  }
+}
+/* =========================================
+   TOUCH DEVICES (NO MOUSE / NO HOVER)
+   Disable hover & glow effects
+   Phones + Tablets only
+   ========================================= */
+@media (hover: none) and (pointer: coarse) {
+  /* Remove glow hover text effect */
+  .glow-hover:hover {
+    text-shadow: none;
+    color: inherit;
+  }
+
+  /* Disable highlight hover animation */
+  .highlight:hover {
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.4);
+    transform: none;
+  }
+}

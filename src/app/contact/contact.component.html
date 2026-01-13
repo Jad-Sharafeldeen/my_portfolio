@@ -1,0 +1,65 @@
+<section class="contact-section" id="contact">
+    <h2 class="section-title">Contact Me</h2>
+
+    <div class="contact-container">
+
+        <!-- CONTACT FORM -->
+        <div class="contact-form">
+            <form (ngSubmit)="sendMessage()" #contactForm="ngForm">
+
+                <input type="text" name="name" placeholder="Name" [(ngModel)]="formData.name" required />
+
+                <input type="email" name="email" placeholder="Email" [(ngModel)]="formData.email" required />
+
+                <input type="text" name="phone" placeholder="Phone (Optional)" [(ngModel)]="formData.phone" />
+
+                <textarea name="message" placeholder="Message" rows="5" [(ngModel)]="formData.message"
+                    required></textarea>
+
+                <button type="submit" [disabled]="contactForm.invalid">
+                    Send Message
+                </button>
+
+            </form>
+        </div>
+
+        <!-- SOCIAL MEDIA -->
+        <!-- SOCIAL MEDIA -->
+        <div class="contact-socials">
+
+            <h3>Or Reach Me Here</h3>
+
+            <div class="social-grid">
+                <a href="https://wa.me/message/WBHLNPKB46IGJ1" target="_blank" class="social-icon whatsapp"
+                    aria-label="WhatsApp">
+                    <i class="fab fa-whatsapp"></i>
+                </a>
+
+                <!-- <a href="https://instagram.com/YOURPROFILE" target="_blank" class="social-icon instagram"
+                    aria-label="Instagram">
+                    <i class="fab fa-instagram"></i>
+                </a>
+
+                <a href="https://facebook.com/YOURPROFILE" target="_blank" class="social-icon facebook"
+                    aria-label="Facebook">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+
+                <a href="https://tiktok.com/@YOURPROFILE" target="_blank" class="social-icon tiktok"
+                    aria-label="TikTok">
+                    <i class="fab fa-tiktok"></i>
+                </a>
+
+                <a href="https://x.com/YOURPROFILE" target="_blank" class="social-icon x" aria-label="X (Twitter)">
+                    <i class="fab fa-x-twitter"></i>
+                </a> -->
+
+                <a href="mailto:jadsharafeldeen@gmail.com" class="social-icon email" aria-label="Email">
+                    <i class="fas fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+
+    </div>
+</section>
